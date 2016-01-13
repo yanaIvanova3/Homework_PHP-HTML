@@ -13,11 +13,11 @@
 			<form action="task1.php" method="post">
 				<div>
 					<label for="first">First number</label>
-					<input type="text" name="first" id="first" value="first"/>
+					<input type="text" name="first" id="first" value="1"/>
 				</div>
 				<div>
 					<label for="second">Second number</label>
-					<input type="text" name="second" id="second" value="second"/>
+					<input type="text" name="second" id="second" value="2"/>
 				</div>
 				<div>
 					<label for="add">Add</label>
