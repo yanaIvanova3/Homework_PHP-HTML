@@ -17,9 +17,7 @@ function validPassword($password) {
 	if( !preg_match( '/[^A-Za-z0-9]+/', $password) || strlen( $password) < 8) {
  		echo "Password should be at least 8 chars long and should have at least 1 non-alphanumeric symbol!";
 	} else {
-		hash('md5', $password);
-		hash('md5', $repeatPassword);
-		echo 'Your username is $username, your encrypted password is $password';
+		return hash('md5', $password);
 	}
 }
 if ($_POST['password'] != $_POST['repeatPassword']) {
@@ -31,7 +29,7 @@ if ($_POST['password'] != $_POST['repeatPassword']) {
 	<div>
 		<form action="" method="post">
 			<div>
-				<label for="username">First Name</label>
+				<label for="username">Username</label>
 				<input type="text" id="username" name="username" />
 			</div>
 			<div>
@@ -40,7 +38,7 @@ if ($_POST['password'] != $_POST['repeatPassword']) {
 			</div>
 			<div>
 				<label for="repear_password">Repeat password</label>
-				<input type="password" id="repeat_password"  name="repeat_password"/>
+				<input type="password" id="repeatPassword"  name="repeatPassword"/>
 			</div>
 			<div>
 				<input type="submit" name="submit" id="submit" value="submit"/>
